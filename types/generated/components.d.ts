@@ -17,10 +17,27 @@ export interface DisplayHero extends Schema.Component {
   };
 }
 
+export interface DisplayCta extends Schema.Component {
+  collectionName: 'components_display_ctas';
+  info: {
+    displayName: 'CTA';
+    icon: 'bell';
+  };
+  attributes: {
+    ctaTitle: Attribute.String;
+    ctaBtnText: Attribute.String & Attribute.Required;
+    ctaLink: Attribute.String & Attribute.Required;
+    ctaLinkInNewTab: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'display.hero': DisplayHero;
+      'display.cta': DisplayCta;
     }
   }
 }

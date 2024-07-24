@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_display_ctas",
+  "info": {
+    "displayName": "CTA",
+    "icon": "bell"
+  },
+  "options": {},
+  "attributes": {
+    "ctaTitle": {
+      "type": "string"
+    },
+    "ctaBtnText": {
+      "type": "string",
+      "required": true
+    },
+    "ctaLink": {
+      "type": "string",
+      "required": true
+    },
+    "ctaLinkInNewTab": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}
